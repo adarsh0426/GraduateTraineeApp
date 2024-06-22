@@ -1,0 +1,89 @@
+<div class="center-container">
+  <div class="form-container">
+    <h3>Edit Graduate Trainee</h3>
+
+    <form #form="ngForm" (ngSubmit)="updateGraduateTrainee()" class="needs-validation" novalidate>
+
+      <div class="form-group">
+        <label for="degreeId">Degree ID:</label>
+        <input type="number" class="form-control" id="degreeId" placeholder="Degree ID" [(ngModel)]="graduateTraineeData.degreeId" name="degreeId">
+      </div>
+
+      <div class="form-group">
+        <label for="graduateTraineeName">Graduate Trainee Name:</label>
+        <input type="text" class="form-control" id="graduateTraineeName" placeholder="Graduate Trainee Name" [(ngModel)]="graduateTraineeData.graduateTraineeName" name="graduateTraineeName">
+      </div>
+
+      <div class="form-group">
+        <label for="graduateTraineeEmail">Graduate Trainee Email:</label>
+        <input type="email" class="form-control" id="graduateTraineeEmail" placeholder="Graduate Trainee Email" [(ngModel)]="graduateTraineeData.graduateTraineeEmail" name="graduateTraineeEmail">
+      </div>
+
+      <div class="form-group">
+        <label for="universityName">University Name:</label>
+        <input type="text" class="form-control" id="universityName" placeholder="University Name" [(ngModel)]="graduateTraineeData.universityName" name="universityName">
+      </div>
+
+      <div class="form-group">
+        <label for="isLastSemesterPending">Last Semester Pending:</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="isLastSemesterPending" [(ngModel)]="graduateTraineeData.isLastSemesterPending" name="isLastSemesterPending">
+          <label class="form-check-label" for="isLastSemesterPending">Check if last semester is pending</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dateOfApplication">Date of Application:</label>
+        <input type="date" id="dateOfApplication" [(ngModel)]="graduateTraineeData.dateOfApplication" name="dateOfApplication" class="form-control">
+      </div>
+
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="form-check">
+          <input class="form-check-input radio-button" type="radio" id="male" value="male" [(ngModel)]="graduateTraineeData.gender" name="gender">
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input radio-button" type="radio" id="female" value="female" [(ngModel)]="graduateTraineeData.gender" name="gender">
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image:</label>
+        <input type="text" class="form-control" id="image" placeholder="Image" [(ngModel)]="graduateTraineeData.image" name="image">
+      </div>
+
+      <div class="form-group">
+        <label for="ai">AI:</label>
+        <input type="number" class="form-control" id="ai" placeholder="AI" [(ngModel)]="graduateTraineeData.ai" name="ai">
+      </div>
+
+      <div class="form-group">
+        <label for="python">Python:</label>
+        <input type="number" class="form-control" id="python" placeholder="Python" [(ngModel)]="graduateTraineeData.python" name="python">
+      </div>
+
+      <div class="form-group">
+        <label for="businessAnalysis">Business Analysis:</label>
+        <input type="number" class="form-control" id="businessAnalysis" placeholder="Business Analysis" [(ngModel)]="graduateTraineeData.businessAnalysis" name="businessAnalysis">
+      </div>
+
+      <div class="form-group">
+        <label for="machineLearning">Machine Learning:</label>
+        <input type="number" class="form-control" id="machineLearning" placeholder="Machine Learning" [(ngModel)]="graduateTraineeData.machineLearning" name="machineLearning">
+      </div>
+
+      <div class="form-group">
+        <label for="practical">Practical:</label>
+        <input type="number" class="form-control" id="practical" placeholder="Practical" [(ngModel)]="graduateTraineeData.practical" name="practical">
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Save</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+

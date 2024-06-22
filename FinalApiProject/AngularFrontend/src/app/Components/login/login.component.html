@@ -1,0 +1,25 @@
+<div class="container d-flex justify-content-center align-items-center vh-80">
+  <div class="card">
+    <div class="card-header text-center">Login as Admin</div>
+    <div class="card-body text-center">
+      <h5 class="card-title">Secure Access</h5>
+    </div>
+    <div class="container">
+      <form [formGroup]="loginForm">
+        <div class="mb-3">
+          <label for="loginId" class="form-label">ID</label>
+          <input type="text" class="form-control" id="loginId" formControlName="loginId" aria-describedby="idHelp">
+          <div id="idHelp" class="form-text">Your data is safe with us.</div>
+        </div>
+        <div class="mb-3">
+          <label for="loginPassword" class="form-label">Password</label>
+          <input type="password" id="loginPassword" formControlName="loginPassword" class="form-control" aria-describedby="passwordHelp">
+          <div id="passwordHelp" class="form-text">
+            Password must be 8-20 characters, with letters and numbers only.
+          </div>
+        </div>
+        <button (click)="login()" type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

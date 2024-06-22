@@ -1,0 +1,133 @@
+<!-- add-graduate-trainee.component.html -->
+<div class="center-container">
+<div class="form-container">
+  <h3>Add New Graduate Trainee</h3>
+
+  <form [formGroup]="graduateTraineeForm" (ngSubmit)="onSubmit()">
+
+    <!-- <div class="form-group">
+      <label for="degreeId">Degree ID:</label>
+      <input type="number" formControlName="degreeId" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('degreeId')?.hasError('required') && (graduateTraineeForm.get('degreeId')?.touched || graduateTraineeForm.get('degreeId')?.dirty)" class="error-message">
+        Degree ID is required.
+      </div>
+    </div> -->
+    <div class="form-group">
+      <label for="degreeId">Degree</label>
+      <select class="form-select" id="degreeId" name="degreeId" formControlName="degreeId" required>
+        <option *ngFor="let department of model" [value]="department.degreeId">{{ department.degreeName }}</option>
+      </select>
+
+      <small
+      *ngIf="
+        !graduateTraineeForm.controls['degreeId'].dirty &&
+        graduateTraineeForm.hasError('required', 'degreeId')
+      "
+      class="text-danger"
+    >Field is required.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="graduateTraineeName">Graduate Trainee Name:</label>
+      <input type="text" formControlName="graduateTraineeName" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('graduateTraineeName')?.hasError('required') && (graduateTraineeForm.get('graduateTraineeName')?.touched || graduateTraineeForm.get('graduateTraineeName')?.dirty)" class="error-message">
+        Graduate Trainee Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="graduateTraineeEmail">Graduate Trainee Email:</label>
+      <input type="email" formControlName="graduateTraineeEmail" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('graduateTraineeEmail')?.hasError('required') && (graduateTraineeForm.get('graduateTraineeEmail')?.touched || graduateTraineeForm.get('graduateTraineeEmail')?.dirty)" class="error-message">
+        Graduate Trainee Email is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="universityName">University Name:</label>
+      <input type="text" formControlName="universityName" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('universityName')?.hasError('required') && (graduateTraineeForm.get('universityName')?.touched || graduateTraineeForm.get('universityName')?.dirty)" class="error-message">
+        University Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Is Last Semester Pending:</label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" formControlName="isLastSemesterPending">
+        <label class="form-check-label" for="isLastSemesterPending">Yes</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <div class="form-check">
+        <input class="form-check-input radio-button" type="radio" id="male" value="male" formControlName="gender">
+        <label class="form-check-label" for="male">Male</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input radio-button" type="radio" id="female" value="female" formControlName="gender">
+        <label class="form-check-label" for="female">Female</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfApplication">Date of Application:</label>
+      <input type="datetime-local" formControlName="dateOfApplication" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="text" formControlName="image" class="form-control">
+    </div>
+<div class="form-group">
+      <label for="ai">AI:</label>
+      <input type="number" formControlName="ai" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('ai')?.hasError('required') && (graduateTraineeForm.get('ai')?.touched || graduateTraineeForm.get('ai')?.dirty)" class="error-message">
+        AI is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="python">Python:</label>
+      <input type="number" formControlName="python" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('python')?.hasError('required') && (graduateTraineeForm.get('python')?.touched || graduateTraineeForm.get('python')?.dirty)" class="error-message">
+        Python is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="businessAnalysis">Business Analysis:</label>
+      <input type="number" formControlName="businessAnalysis" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('businessAnalysis')?.hasError('required') && (graduateTraineeForm.get('businessAnalysis')?.touched || graduateTraineeForm.get('businessAnalysis')?.dirty)" class="error-message">
+        Business Analysis is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="machineLearning">Machine Learning:</label>
+      <input type="number" formControlName="machineLearning" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('machineLearning')?.hasError('required') && (graduateTraineeForm.get('machineLearning')?.touched || graduateTraineeForm.get('machineLearning')?.dirty)" class="error-message">
+        Machine Learning is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="practical">Practical:</label>
+      <input type="number" formControlName="practical" class="form-control">
+      <div *ngIf="graduateTraineeForm.get('practical')?.hasError('required') && (graduateTraineeForm.get('practical')?.touched || graduateTraineeForm.get('practical')?.dirty)" class="error-message">
+        Practical is required.
+      </div>
+    </div>
+
+
+    <!-- Success message -->
+    <div *ngIf="successMessage" class="success-message">
+      Graduate trainee added successfully!
+    </div>
+
+    <button type="submit" [disabled]="!graduateTraineeForm.valid" class="btn btn-primary">Submit</button>
+    <button class="btn btn-secondary" (click)="redirectToDashboard()">Back to Dashboard</button>
+
+  </form>
+</div>
+</div>
