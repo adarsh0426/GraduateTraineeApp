@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/FinalApiProject/obj/Release/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+/FinalApiProject/obj/Release/net6.0/FinalApiProject.AssemblyInfo.cs
+/FinalApiProject/obj/Debug/net6.0/FinalApiProject.assets.cache
+/FinalApiProject/obj/Debug/net6.0/FinalApiProject.GeneratedMSBuildEditorConfig.editorconfig
+/FinalApiProject/obj/Release/net6.0/FinalApiProject.AssemblyInfoInputs.cache
+/FinalApiProject/obj/Release/net6.0/FinalApiProject.assets.cache
+/FinalApiProject/obj/Release/net6.0/FinalApiProject.csproj.AssemblyReference.cache
+/FinalApiProject/obj/Release/net6.0/FinalApiProject.GeneratedMSBuildEditorConfig.editorconfig
+/FinalApiProject/obj/Release/net6.0/FinalApiProject.GlobalUsings.g.cs
