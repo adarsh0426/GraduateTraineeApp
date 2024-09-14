@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaymi\\source\\repos\\FinalApiProject\\FinalApiProject\\FinalApiProject.csproj": {}
+    "C:\\Users\\jaymi\\Source\\Repos\\adarsh0426\\GraduateTraineeApp\\FinalApiProject\\FinalApiProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaymi\\source\\repos\\FinalApiProject\\FinalApiProject\\FinalApiProject.csproj": {
+    "C:\\Users\\jaymi\\Source\\Repos\\adarsh0426\\GraduateTraineeApp\\FinalApiProject\\FinalApiProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaymi\\source\\repos\\FinalApiProject\\FinalApiProject\\FinalApiProject.csproj",
+        "projectUniqueName": "C:\\Users\\jaymi\\Source\\Repos\\adarsh0426\\GraduateTraineeApp\\FinalApiProject\\FinalApiProject.csproj",
         "projectName": "FinalApiProject",
-        "projectPath": "C:\\Users\\jaymi\\source\\repos\\FinalApiProject\\FinalApiProject\\FinalApiProject.csproj",
+        "projectPath": "C:\\Users\\jaymi\\Source\\Repos\\adarsh0426\\GraduateTraineeApp\\FinalApiProject\\FinalApiProject.csproj",
         "packagesPath": "C:\\Users\\jaymi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaymi\\source\\repos\\FinalApiProject\\FinalApiProject\\obj\\",
+        "outputPath": "C:\\Users\\jaymi\\Source\\Repos\\adarsh0426\\GraduateTraineeApp\\FinalApiProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jaymi\\AppData\\Roaming\\NuGet\\NuGet.Config",
